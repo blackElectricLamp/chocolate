@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.by.happy.chocolate.user.dao.IUserDao" >
+
+    <insert id="registerUser" parameterType="user">
+        insert into tb_user (name, username, password, birthday, sex <if test="intro != null and intro != ''">, intro</if>)
+        value
+        (#{name}, #{username}, #{password}, #{birthday}, #{sex} <if test="intro != null and intro != ''">, #{intro}</if>)
+    </insert>
+
+</mapper>
