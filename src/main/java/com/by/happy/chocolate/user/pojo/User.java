@@ -15,6 +15,15 @@ public class User {
     private Integer sex;   //0：女  1：男
     private String intro;   //简介
     private Integer age;
+    private String city;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public Integer getId() {
         return id;
